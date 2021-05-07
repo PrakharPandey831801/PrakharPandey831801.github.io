@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact || MyFashionWorld.com</title>
+    <link rel="stylesheet" href="/mfw-contact.css">
+</head>
+<body>
+    <nav>
+        <img src="/Images/logo.png" alt="" id="logo">
+        <img src="/Images/icons8-menu-100.png" alt="" id="drpbtn">
+        <div id="nav-container">
+            <div id="ul-div">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/mfw-services.html" >Services</a></li>
+                    <li><a href="#" id="active">Contact</a></li>
+                    <li><a href="/mfw-about.html">About</a></li>
+                    <li><a href="/mfw-signup.html" id="inactive">Sign Up</a></li>
+                </ul>
+            </div>
+            <div id="btn-container">
+                <a href="/mfw-signup.html"><button id="signup" class="nav-btn">Sign Up</button></a>
+                <input type="text" placeholder="Search">
+                <button id="searchbtn" class="nav-btn">Search</button>
+            </div>
+        </div>
+    </nav>
+    <section id="sec1"><h1>Contact</h1>
+    </section>
+    <div id="sec2">
+        <div id="div-container">
+            <section>
+            <div id="div1">
+                <div id="upper-div">
+                    <h3> Form</h3>
+                    <form action="#">
+                        <input type="text" placeholder="Name" required>
+                        <input type="email number" placeholder="Email/Phone No." required>
+                        <input type="password" placeholder="Password" required>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+                <div id="lower-div">
+                    <div><img src="/Images/icons8-outgoing-call-100.png" alt=""></div>
+                    <div><img src="/Images/icons8-new-message-100.png" alt=""></div>
+                </div>
+            </div>
+        </section>
+            <footer>
+                <div id="footer-container">
+                    <h3>About</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel fuga animi voluptas minus quibusdam vero
+                        unde temporibus consequatur totam molestias harum praesentium corrupti hic mollitia, perspiciatis
+                        nesciunt doloribus ullam aliquam ab! Esse, sed eligendi delectus quia nisi assumenda molestiae nihil,
+                        voluptate repellendus saepe unde, fugiat tenetur debitis totam consectetur! Doloribus, non hic deserunt
+                        dicta unde nesciunt necessitatibus officiis tempore odit consectetur, provident sint voluptatibus quae
+                        labore in consequuntur. Ex explicabo voluptas animi, veritatis, mollitia fuga totam laborum eaque
+                        aliquam libero, voluptatum voluptatem iste ratione porro perspiciatis dolores. Culpa ipsum excepturi
+                        animi ab totam earum suscipit est itaque! Repellendus, sint accusantium!</p>
+                    <div id="linear">
+                        <div>
+                            <h3>Our Branches</h3>
+                            <ul>
+                                <li>AAAAAAAA</li>
+                                <li>BBBBBBBB</li>
+                                <li>CCCCCCCC</li>
+                                <li>DDDDDDDD</li>
+                                <li>EEEEEEEE</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Our Websites</h3>
+                            <ul>
+                                <li><a href="#">WebsiteA.com</a></li>
+                                <li><a href="#">WebsiteB.com</a></li>
+                                <li><a href="#">WebsiteC.com</a></li>
+                                <li><a href="#">WebsiteD.com</a></li>
+                                <li><a href="#">WebsiteE.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="copyright">All rights reserved. &copy;</div>
+            </footer>
+        </div>
+    </div>
+
+
+    <script>
+        let media=window.matchMedia("(max-width: 1233px)");
+        let nvcontainer=document.getElementById("nav-container");
+        let uldiv=document.getElementById("ul-div");
+        let drpbtn=document.getElementById("drpbtn");
+        let inactive=document.getElementById("inactive");
+
+
+        function toggledrpmenu(){
+                    if(nvcontainer.style.display!="flex"){
+                    nvcontainer.style.display="flex";
+                    nvcontainer.style.width="100%";
+                    nvcontainer.style.position="absolute";
+                    nvcontainer.style.top="72px";
+                    nvcontainer.style.backgroundColor="black";
+                    uldiv.style.width="100%";
+                    inactive.style.display="block";
+                }
+                else{
+                    nvcontainer.style.display="none";
+                    
+                    }
+                }
+                
+                
+                function mediamatch(media){
+                    if(media.matches){
+                        drpbtn.style.display="block";
+                        nvcontainer.style.display="none";
+                        drpbtn.addEventListener("click", toggledrpmenu);
+                    }
+                    else{
+                        nvcontainer.style.display="flex";
+                        nvcontainer.style.width="92%";
+                        nvcontainer.style.position="initial";
+                        nvcontainer.style.top="auto";
+                        nvcontainer.style.backgroundColor="rebeccapurple";
+                        uldiv.style.width="68%";
+                        inactive.style.display="none";
+                        drpbtn.style.display="none";
+                        drpbtn.removeEventListener("click", toggledrpmenu);
+            }
+        }
+
+        mediamatch(media);
+        media.addListener(mediamatch);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,265 @@
+/* Body Styling */
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+nav{
+    display: flex;
+    background-color: rebeccapurple;
+    position: fixed;
+    width: 100%;
+}
+#logo{
+    width: 71px;
+    padding: 0 22px;
+}
+#drpbtn{
+    width: 39px;
+    height: 41px;
+    position: relative;
+    margin-top: 14px;
+    filter: invert(1);
+    display: none;
+}
+#nav-container{
+    display: flex;
+    width: 92%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav #ul-div{
+    width: 68%;
+}
+nav #ul-div ul{
+    width: 85%;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+nav #ul-div ul a{
+    color: white;
+    text-decoration: none;
+}
+nav #ul-div ul a:hover{
+    opacity: 0.8;
+}
+#active{
+    color: cyan  !important;
+}
+#active:hover{
+    opacity: 1 !important;
+}
+#inactive{
+    display: none;
+}
+
+
+#btn-container{
+    width: 50%;
+    margin-right: 10px;
+}
+nav input{
+    height: 45px;
+    width: 50%;
+    padding: 0 16px;
+    border: none;
+}
+.nav-btn{
+    width: 95px;
+    height: 45px;
+    cursor: pointer;
+}
+.nav-btn:hover{
+    opacity: 0.8;
+}
+#signup{
+    background-color: white;
+    color: black;
+    border: none;
+}
+#searchbtn{
+    background-color: green;
+    color: white;
+    border: none;
+}
+
+
+
+@media(max-width:1233px){
+    #drpbtn{
+        display: block;
+    }
+    #nav-container {
+        display: none;
+    }
+    #btn-container{
+        display: none;
+    }
+}
+@media(max-width:440px){
+    
+    #nav-container {
+    flex-direction: column !important;
+    height: 232px !important;
+    }
+    nav #ul-div{
+        height: 77%;
+    }
+    nav #ul-div ul {
+        height: 100% !important;
+        margin: 22px !important;
+        flex-direction: column !important;
+    }
+}
+
+
+
+/* Section1 Styling */
+#sec1::after{
+    content: "";
+    background: url("/Images/pexels-pixabay-247206.jpg") no-repeat center center/cover;
+    position: absolute;
+    top: 73px;
+    left: 0;
+    width: 100%;
+    height: 150%;
+    z-index: -2;
+}
+#sec1 h1{
+    position: absolute;
+    top: 333px;
+    left: 70px;
+    font-size: 4rem;
+    z-index: -1;
+    color: white;
+}
+/* Section2 Styling */
+#sec2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 1190px;
+    z-index: -1;
+}
+#sec2 section{
+    padding: 22px;
+}
+#sec2 div{
+    width: 95%;
+    height: 80%;
+}
+#sec2 div .flex{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+#sec2 div .flex li{
+    margin: 0 22px;
+}
+#sec2 div #websites li a{
+    text-decoration: none;
+    color: black;
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+/* ------------------------------------- */
+/* Animation */
+@keyframes blink{
+    from{
+        color: black;
+    }
+    to{
+        color: white;
+    }
+}
+/* --------------------------------------- */
+/* ------------------------------------- */
+/* Hover State Styling */
+#sec2 div #websites li a:hover{
+    color: red;
+    animation-duration: 0s;
+}
+/* --------------------------------------- */
+/* Media Query */
+@media(max-width:705px){
+    #sec2{
+       margin: 0 5px;
+    }
+    #sec2 div .flex{
+       flex-direction: column;
+    }
+    #sec2 div .flex li{
+        margin: 10px 0;
+    }
+    nav #drpdn #buttons form {
+        flex-direction: column;
+    }
+}
+/* Footer Styling */
+footer{
+    position: relative;
+    top: 113px;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: #361c4f;
+    color: white;
+    width: 98.7vw;
+    left: 0;
+}
+#footer-container{
+    padding: 22px;
+}
+#linear div ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    width: 100%;
+    padding: 0;
+}
+#linear div ul li{
+    margin: 0 8px;
+}
+#linear div ul li a{
+    text-decoration: none;
+    color: rgb(9, 136, 136);
+}
+/* Hover State Styling */
+#linear div ul li a:hover{
+    color: red;
+}
+#copyright{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: white;
+    background-color: black;
+}
+/* Media Query */
+@media(max-width:1343px){
+   footer{
+       width: 100vw;
+    }
+    #footer-container {
+        padding: 2.4%;
+    }
+}
+@media(max-width:722px){
+    #linear div ul {
+        flex-wrap: wrap;
+    }
+}
+@media(max-width:472px){
+    #sec2 div {
+        width: 91%;
+    }
+}
