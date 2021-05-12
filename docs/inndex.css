@@ -127,13 +127,13 @@ nav input{
     top: 73px;
     left: 0;
     width: 100%;
-    height: 150%;
+    height: 150vh;
     z-index: -1;
 }
 /* Section2 Styling */
 #sec2{
-    position: absolute;
-    top: 1158px;
+    position: relative;
+    top: 170vh;
     display: flex;
     width: 88%;
     height: 230%;
@@ -156,12 +156,16 @@ nav input{
 #sec2 #img-container div img{
     width: 40%;
 }
+
+
+.wrp{
+    margin: 52px 0;
+}
 /* Section3 Styling */
 #sec3{
-    position: absolute;
-    top: 2866px;
+    position: relative;
+    top: 180vh;
     width: 90%;
-    padding: 0 5%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -170,6 +174,7 @@ nav input{
 }
 #sec3 section{
     display: flex;
+    padding: 0 5%;
 }
 #sec3 #img-cntnr-s3{
     width: 49%;
@@ -224,16 +229,15 @@ nav input{
 
 /* Footer Styling */
 footer{
-    position: absolute;
-    top: 903px;
+    position: relative;
+    top: 0;
     margin: 0;
     font-family: 'Lato', sans-serif;
     display: flex;
     flex-direction: column;
     background-color: #361c4f;
     color: white;
-    width: 98.7vw;
-    left: 0;
+    width: 100vw;
 }
 #footer-container{
     padding: 22px;
@@ -264,12 +268,23 @@ footer{
     background-color: black;
 }
 /* Media Query */
-@media(max-width:1343px){
-   footer{
-       width: 100vw;
-   }
+@media(min-width:1331px){
+    footer{
+        width: 100vw;
+        width: 98.7vw;
+    }
 }
-@media(max-width:1340px){
+/* @media(max-width:1440px) and (min-width:1440px){
+    footer{
+    }
+} */
+@media(max-width:1330px){
+    #sec3 {
+        width: 100%;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
     #sec3 #img-cntnr-s3{
         display: none;
     }
@@ -281,6 +296,16 @@ footer{
     }
     #sec3 #form-cntnr form #eligability-test-cntnr {
         padding: 33px 91px;
+    }
+}
+@media(max-width:1300px){
+    footer{
+        width: 98.7vw;
+    }
+}
+@media(max-width:1200px){
+    footer{
+        width: 100vw;
     }
 }
 @media(max-width:775px){
@@ -311,11 +336,15 @@ footer{
         display: block;
     }
 }
-@media(max-width:633px){
+@media(max-width:650px){
     #linear div ul {
-       flex-direction: column;
+        flex-direction: column;
     }
     #sec2 #img-container div img {
         width: 62%;
+    }
+    footer{
+       /* left: -18px; */
+       width: 100vw;
     }
 }

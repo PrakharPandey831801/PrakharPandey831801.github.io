@@ -1,3 +1,7 @@
+/* HTML Styling */
+html{
+    scroll-behavior: smooth;
+}
 /* Body Styling */
 body{
     margin: 0;
@@ -127,53 +131,36 @@ nav input{
     top: 73px;
     left: 0;
     width: 100%;
-    height: 150%;
+    height: 100vh;
     z-index: -2;
 }
-#sec1 h1{
+#sec1 H1{
     position: absolute;
-    top: 494px;
-    left: 130px;
+    top: 286px;
+    left: 91px;
     font-size: 4rem;
+    color: currentColor;
     z-index: -1;
 }
-/* Section2 Stying */
+
+
+/* Section2 Styling */
 #sec2{
+    width: 100%;
     display: flex;
+    top: calc(100vh + 135px);
+    position: absolute;
     flex-direction: column;
     align-items: center;
     z-index: -1;
-    width: 100%;
-    position: relative;
-    top: 935px;
 }
 #sec2 section{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 86px;
-    width: 100%;
+    width: 90%;
+    padding: 0 22px;
+    box-sizing: border-box;
 }
-#div-container{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    height: auto;
-    top: 152px;
-    position: absolute;
-    left: 0;
-    width: 100%;
-    margin-top: 95px;
-    z-index: -1;
-}
-#sec2 p{
-    padding: 5%;
-    
-}
-#div-container p{
-    padding: 22px;
-    
-}
-#div-container form{
+
+#upper-div form{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -182,16 +169,16 @@ nav input{
     height: 452px;
     margin-top: 22px;
 }
-#div-container form input{
+#upper-div form input{
     width: 100%;
     height: 72%;
     margin: 22px 0;
     border-radius: 0;
-    border: 0.2px solid;
+    border: 0.2px solid gray;
     padding: 0 22px;
 }
-#div-container form button{
-    width: 109%;
+#upper-div form button{
+    width: 100%;
     height: 345px;
     margin: 22px 0px;
     padding: 0px 22px;
@@ -202,71 +189,28 @@ nav input{
     border: 1px solid rgb(13, 110, 253);
     color: rgb(13, 110, 253);
 }
-#div-container #ec-container{
+#lower-div{
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-#div-container #ec-container input{
-    width: 26px;
-    margin: 0 22px;
-    height: -21px !important;
-    height: 12px;
-}
-#div-container #ec-container div{
-    height: 13%;
-}
-#div1{
-    display: flex;
-    margin-bottom: 22px;
+    width: 100%;
+    margin: 100px 0;
     justify-content: space-around;
-    width: 100%;
 }
-#div1 #upper-div{
-    width: 40%;
-    text-align: center;
+#lower-div div{
+    width: 10%;
 }
-#div1 #lower-div{
-    height: 62%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 123px 0px;
-}
-#div1 #lower-div div img{
-    cursor: pointer;
-}
-#div2{
-    display: flex;
-    justify-content: center;
-    /* height: 543px; */
-    width: 58%;
-    margin: 40px 22px;
-}
-#div2 img{
-    width: 100%;
-}
-/* ------------------------------------- */
-/* Hover State Styling */
-#div-container form button:hover{
-    background-color: #0d6efd;
-    border: 2px solid #0d6efd;
-    color: white;
-}
-/* --------------------------------------- */
+
 
 /* Footer Styling */
 footer{
     position: relative;
-    top: 110px;
-    width: 100%;
+    top: 0;
     margin: 0;
     font-family: 'Lato', sans-serif;
     display: flex;
     flex-direction: column;
     background-color: #361c4f;
     color: white;
+    width: 100vw;
 }
 #footer-container{
     padding: 22px;
@@ -283,7 +227,7 @@ footer{
 }
 #linear div ul li a{
     text-decoration: none;
-    color: #a2a2a1;
+    color: rgb(9, 136, 136);
 }
 /* Hover State Styling */
 #linear div ul li a:hover{
@@ -297,44 +241,62 @@ footer{
     background-color: black;
 }
 /* Media Query */
-
-@media(max-width:890px){
-    #div1 {
-        flex-direction: column;
-    }
-    #div1 #upper-div {
-        width: 100%;
-    }
-    #div1 #lower-div {
-        width: 100%;
-        flex-direction: row;
+@media(min-width:1331px){
+    footer{
+        width: 98.7vw;
     }
 }
-@media(max-width:600px){
-    #linear div ul{
-        flex-direction: column;
+@media(max-width:1330px){
+    footer{
+        width: 98.7vw;
     }
 }
-@media(max-width:500px){
-    #sec1 h1 {
-        left: 15%;
-        font-size: 3rem;
-        color: #ff0d5e;
+@media(max-width:1200px){
+    footer{
+        width: 100vw;
+    }
+    #sec1 H1 {
+        top: 50%;
     }
 }
-@media(max-width:453px){
-    #div1 #lower-div {
+@media(max-width:884px){
+    #lower-div {
         flex-direction: column;
         align-items: center;
-        height: 252px;
-        }
+        margin: 12px 0;
     }
-
-@media(max-width:298px){
-    #div-container form input {
-        text-align: center;
+    #lower-div div{
+        width: 73px;
     }
-    #div-container form button {
+    #lower-div div img {
+        margin: 22px 0;
+    }
+    #sec1 H1 {
+        top: 47%;
         left: 0;
+        height: 48%;
+        font-size: 4rem;
+        width: 100%;
+        text-align: center;
+        color: white;
+    }
+}
+
+@media(max-width:650px){
+    #linear div ul {
+        flex-direction: column;
+    }
+    footer{
+       width: 100vw;
+    }
+}
+/* Media Query */
+@media(max-width:435px){
+    #sec2 {
+        width: 100%;
+        margin-left: 0;
+    }
+    #sec1 H1 {
+        font-size: 2rem;
     }
 }
