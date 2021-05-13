@@ -12,6 +12,7 @@ nav{
     background-color: rebeccapurple;
     position: fixed;
     width: 100%;
+    z-index: 10;
 }
 #logo{
     width: 71px;
@@ -59,45 +60,12 @@ nav #ul-div ul a:hover{
 }
 
 
-#btn-container{
-    width: 50%;
-    margin-right: 10px;
-}
-nav input{
-    height: 45px;
-    width: 50%;
-    padding: 0 16px;
-    border: none;
-}
-.nav-btn{
-    width: 95px;
-    height: 45px;
-    cursor: pointer;
-}
-.nav-btn:hover{
-    opacity: 0.8;
-}
-#signup{
-    background-color: white;
-    color: black;
-    border: none;
-}
-#searchbtn{
-    background-color: green;
-    color: white;
-    border: none;
-}
-
-
 
 @media(max-width:1233px){
     #drpbtn{
         display: block;
     }
     #nav-container {
-        display: none;
-    }
-    #btn-container{
         display: none;
     }
 }
@@ -149,6 +117,7 @@ nav input{
 #sec2 #img-container div{
     display: flex;
     justify-content: space-around;
+    margin: 41px 0;
 }
 #sec2 #img-container div p{
     margin: 1px 22px;
@@ -165,15 +134,15 @@ nav input{
 #sec3{
     position: relative;
     top: 180vh;
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     font-family: 'Lato', sans-serif;
-    z-index: -1;
 }
 #sec3 section{
     display: flex;
+    justify-content: center;
     padding: 0 5%;
 }
 #sec3 #img-cntnr-s3{
@@ -230,14 +199,14 @@ nav input{
 /* Footer Styling */
 footer{
     position: relative;
-    top: 0;
+    top: 10vh;
     margin: 0;
     font-family: 'Lato', sans-serif;
     display: flex;
     flex-direction: column;
     background-color: #361c4f;
     color: white;
-    width: 100vw;
+    width: 100%;
 }
 #footer-container{
     padding: 22px;
@@ -268,19 +237,8 @@ footer{
     background-color: black;
 }
 /* Media Query */
-@media(min-width:1331px){
-    footer{
-        width: 100vw;
-        width: 98.7vw;
-    }
-}
-/* @media(max-width:1440px) and (min-width:1440px){
-    footer{
-    }
-} */
 @media(max-width:1330px){
     #sec3 {
-        width: 100%;
         align-items: center;
         flex-direction: column;
         justify-content: center;
@@ -296,16 +254,6 @@ footer{
     }
     #sec3 #form-cntnr form #eligability-test-cntnr {
         padding: 33px 91px;
-    }
-}
-@media(max-width:1300px){
-    footer{
-        width: 98.7vw;
-    }
-}
-@media(max-width:1200px){
-    footer{
-        width: 100vw;
     }
 }
 @media(max-width:775px){
@@ -342,9 +290,5 @@ footer{
     }
     #sec2 #img-container div img {
         width: 62%;
-    }
-    footer{
-       /* left: -18px; */
-       width: 100vw;
     }
 }

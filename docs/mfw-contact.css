@@ -63,45 +63,11 @@ nav #ul-div ul a:hover{
 }
 
 
-#btn-container{
-    width: 50%;
-    margin-right: 10px;
-}
-nav input{
-    height: 45px;
-    width: 50%;
-    padding: 0 16px;
-    border: none;
-}
-.nav-btn{
-    width: 95px;
-    height: 45px;
-    cursor: pointer;
-}
-.nav-btn:hover{
-    opacity: 0.8;
-}
-#signup{
-    background-color: white;
-    color: black;
-    border: none;
-}
-#searchbtn{
-    background-color: green;
-    color: white;
-    border: none;
-}
-
-
-
 @media(max-width:1233px){
     #drpbtn{
         display: block;
     }
     #nav-container {
-        display: none;
-    }
-    #btn-container{
         display: none;
     }
 }
@@ -210,7 +176,7 @@ footer{
     flex-direction: column;
     background-color: #361c4f;
     color: white;
-    width: 100vw;
+    width: 100%;
 }
 #footer-container{
     padding: 22px;
@@ -241,20 +207,7 @@ footer{
     background-color: black;
 }
 /* Media Query */
-@media(min-width:1331px){
-    footer{
-        width: 98.7vw;
-    }
-}
-@media(max-width:1330px){
-    footer{
-        width: 98.7vw;
-    }
-}
 @media(max-width:1200px){
-    footer{
-        width: 100vw;
-    }
     #sec1 H1 {
         top: 50%;
     }
@@ -285,9 +238,6 @@ footer{
 @media(max-width:650px){
     #linear div ul {
         flex-direction: column;
-    }
-    footer{
-       width: 100vw;
     }
 }
 /* Media Query */

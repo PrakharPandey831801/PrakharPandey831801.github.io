@@ -63,45 +63,11 @@ nav #ul-div ul a:hover{
 }
 
 
-#btn-container{
-    width: 50%;
-    margin-right: 10px;
-}
-nav input{
-    height: 45px;
-    width: 50%;
-    padding: 0 16px;
-    border: none;
-}
-.nav-btn{
-    width: 95px;
-    height: 45px;
-    cursor: pointer;
-}
-.nav-btn:hover{
-    opacity: 0.8;
-}
-#signup{
-    background-color: white;
-    color: black;
-    border: none;
-}
-#searchbtn{
-    background-color: green;
-    color: white;
-    border: none;
-}
-
-
-
 @media(max-width:1233px){
     #drpbtn{
         display: block;
     }
     #nav-container {
-        display: none;
-    }
-    #btn-container{
         display: none;
     }
 }

@@ -59,34 +59,7 @@ nav #ul-div ul a:hover{
 }
 
 
-#btn-container{
-    width: 50%;
-    margin-right: 10px;
-}
-nav input{
-    height: 45px;
-    width: 50%;
-    padding: 0 16px;
-    border: none;
-}
-.nav-btn{
-    width: 95px;
-    height: 45px;
-    cursor: pointer;
-}
-.nav-btn:hover{
-    opacity: 0.8;
-}
-#signup{
-    background-color: white;
-    color: black;
-    border: none;
-}
-#searchbtn{
-    background-color: green;
-    color: white;
-    border: none;
-}
+
 
 
 
@@ -95,9 +68,6 @@ nav input{
         display: block;
     }
     #nav-container {
-        display: none;
-    }
-    #btn-container{
         display: none;
     }
 }
@@ -127,7 +97,7 @@ nav input{
     top: 73px;
     left: 0;
     width: 100%;
-    height: 150%;
+    height: 100vh;
     z-index: -2;
 }
 #sec1 h1{
@@ -143,15 +113,16 @@ nav input{
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: absolute;
-    top: 1190px;
+    position: relative;
+    top: calc(110vh);
     z-index: -1;
 }
 #sec2 section{
     padding: 22px;
 }
 #sec2 div{
-    width: 95%;
+    width: 100%;
+    box-sizing: border-box;
     height: 80%;
 }
 #sec2 div .flex{
@@ -206,14 +177,14 @@ nav input{
 /* Footer Styling */
 footer{
     position: relative;
-    top: 113px;
+    top: calc(10vh);
     margin: 0;
     font-family: 'Lato', sans-serif;
     display: flex;
     flex-direction: column;
     background-color: #361c4f;
     color: white;
-    width: 98.7vw;
+    width:100%;
     left: 0;
 }
 #footer-container{
@@ -246,9 +217,6 @@ footer{
 }
 /* Media Query */
 @media(max-width:1343px){
-   footer{
-       width: 100vw;
-    }
     #footer-container {
         padding: 2.4%;
     }
